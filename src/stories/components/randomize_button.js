@@ -1,7 +1,30 @@
 import React from 'react';
 
-export default function RandomizeButton({...props}) {
+export default function RandomizeButton({getTweet, ...props}) {
   return (
-    <button onClick={() => console.log('Random Cat Baby')}>Randomize Me Baby</button>
+    <button
+      onClick={() => getTweet(tweetList[Math.floor(Math.random() * tweetList.length)])}>
+      Bongo Me Baby
+    </button>
   );
 };
+
+const tweetList = [
+  '1041945336866983936',
+  '1042117095260139520',
+  '1042141269672243200',
+  '1042140031429824517',
+  '1041426791921930240',
+  '1041421444431982593',
+  '1041030750206873600',
+  '1041136200914952193',
+  '1040673002680188928',
+  '1041382878528061440',
+  '1040727049441296385',
+  '1041007925425258496',
+  '1040934898197061632',
+  '1040596319843172353',
+  '1040033891703300096',
+  '1040226240920055808',
+  '1039758897517604864'
+];

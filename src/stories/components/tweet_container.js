@@ -5,22 +5,31 @@ import DisplayTweet from './embed_tweet';
 class TweetContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {tweetId: ''};
+    this.state = {tweet: ''};
   }
 
-  setTweet(tweetId) {
-    this.setState({tweetId});
+  setTweet(tweet) {
+    this.setState({tweet});
   }
 
   static defaultProps = {
-    tweetId: '1041945336866983936'
+    tweet: {
+      id: '1041945336866983936'
+    }
   }
 
   render() {
+    const {
+      tweetList
+    } = this.props;
+
     return (
       <div>
-        <DisplayTweet tweetId={this.state.tweetId} />
-        <RandomizeButton getTweet={(tweetId) => this.setTweet(tweetId)}/>
+        <DisplayTweet tweetId={this.state.tweet.id} />
+        <RandomizeButton
+          tweetList={tweetList}
+          getTweet={(tweet) => this.setTweet(tweet)}
+        />
       </div>
     );
   }

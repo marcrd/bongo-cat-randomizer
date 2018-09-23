@@ -9,7 +9,7 @@ class TweetContainer extends React.Component {
   }
 
   setTweet(tweetId) {
-    this.setState({tweetId: tweetId});
+    this.setState({tweetId});
   }
 
   static defaultProps = {
@@ -17,11 +17,9 @@ class TweetContainer extends React.Component {
   }
 
   render() {
-    const tweetId = this.state.tweetId;
-
     return (
       <div>
-        <DisplayTweet tweetId={tweetId} />
+        <DisplayTweet tweetId={this.state.tweetId} />
         <RandomizeButton getTweet={(tweetId) => this.setTweet(tweetId)}/>
       </div>
     );

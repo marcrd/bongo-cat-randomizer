@@ -6,7 +6,7 @@ import TweetContainer from './components/tweet_container';
 
 storiesOf('Components', module)
   .add('Randomize Me Button', () => (
-    <RandomizeButton />
+    <RandomizeButton getTweet={(tweetId) => console.log(tweetId)}/>
   ))
   .add('Example Embedded Tweet', () => (
     <DisplayTweet tweetId={'1041945336866983936'} />

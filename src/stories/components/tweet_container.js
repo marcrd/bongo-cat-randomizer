@@ -1,6 +1,7 @@
 import React from 'react';
 import RandomizeButton from './randomize_button'
 import DisplayTweet from './embed_tweet';
+import TweetDisplayHelper from './tweet_display_helper';
 
 class TweetContainer extends React.Component {
   constructor(props) {
@@ -38,11 +39,7 @@ class TweetContainer extends React.Component {
           getTweet={(tweet) => this.setTweet(tweet)}
         />
         {/* Display this for inside story book for testing and tagging purposes */}
-        <pre>
-          <p> Name: {this.state.tweet.name} </p>
-          <p> String: {this.state.tweet.id} </p>
-          <p> Tags: {this.state.tweet.tags.map(tag => <span> {tag} </span>)} </p>
-        </pre>
+        <TweetDisplayHelper tweet={this.state.tweet} />
       </div>
     );
   }

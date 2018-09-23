@@ -2,6 +2,7 @@ import React from 'react';
 import RandomizeButton from './randomize_button'
 import DisplayTweet from './embed_tweet';
 import TweetDisplayHelper from './tweet_display_helper';
+import Tags from './tags';
 
 class TweetContainer extends React.Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class TweetContainer extends React.Component {
     return (
       <div>
         <DisplayTweet tweetId={this.state.tweet.id} />
+        <Tags tags={this.state.tweet.tags} />
         <RandomizeButton
           tweetList={tweetList}
           getTweet={(tweet) => this.setTweet(tweet)}

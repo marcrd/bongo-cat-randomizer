@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import RandomizeButton from './components/randomize_button'
 import DisplayTweet from './components/embed_tweet';
 import TweetContainer from './components/tweet_container';
+import Tags from './components/tags';
 
 storiesOf('Components', module)
   .add('Randomize Me Button', () => (
@@ -13,6 +14,9 @@ storiesOf('Components', module)
   ))
   .add('Example Embedded Tweet', () => (
     <DisplayTweet tweetId={'1041945336866983936'} />
+  ))
+  .add('Tweet Tags', () => (
+    <Tags tags={exampleTweet.tags} />
   ));
 
 storiesOf('Prototype', module)
@@ -21,6 +25,12 @@ storiesOf('Prototype', module)
       <TweetContainer tweetList={tweetList} />
     );
   });
+
+const exampleTweet = {
+  name: 'come-on-and-slam',
+  id: '1041945336866983936',
+  tags: ['ComeOnAndSlam', 'SpaceJam', 'BongoCat']
+};
 
 const tweetList = [
   {

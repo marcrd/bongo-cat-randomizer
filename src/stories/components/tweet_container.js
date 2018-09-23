@@ -5,7 +5,13 @@ import DisplayTweet from './embed_tweet';
 class TweetContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {tweet: ''};
+    this.state = {
+      tweet: {
+        name: 'come-on-and-slam',
+        id: '1041945336866983936',
+        tags: ['ComeOnAndSlam', 'SpaceJam', 'BongoCat']
+      }
+    };
   }
 
   setTweet(tweet) {
@@ -14,7 +20,8 @@ class TweetContainer extends React.Component {
 
   static defaultProps = {
     tweet: {
-      id: '1041945336866983936'
+      id: '1041945336866983936',
+      tags: []
     }
   }
 
@@ -30,6 +37,12 @@ class TweetContainer extends React.Component {
           tweetList={tweetList}
           getTweet={(tweet) => this.setTweet(tweet)}
         />
+        {/* Display this for inside story book for testing and tagging purposes */}
+        <pre>
+          <p> Name: {this.state.tweet.name} </p>
+          <p> String: {this.state.tweet.id} </p>
+          <p> Tags: {this.state.tweet.tags.map(tag => <span> {tag} </span>)} </p>
+        </pre>
       </div>
     );
   }

@@ -38,7 +38,7 @@ class TweetContainer extends React.Component {
           tweetList={tweetList}
           getTweet={(tweet) => this.setTweet(tweet)}
         />
-        {/* Display this for inside story book for testing and tagging purposes */}
+        {/* Display this for now inside story book for testing and tagging purposes */}
         <TweetDisplayHelper tweet={this.state.tweet} />
       </div>
     );

@@ -3,6 +3,13 @@ import RandomizeButton from './randomize_button'
 import DisplayTweet from './embed_tweet';
 import TweetDisplayHelper from './tweet_display_helper';
 import Tags from './tags';
+import styled from 'react-emotion';
+
+const Container = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center'
+});
 
 class TweetContainer extends React.Component {
   constructor(props) {
@@ -29,11 +36,12 @@ class TweetContainer extends React.Component {
 
   render() {
     const {
-      tweetList
+      tweetList,
+      debug
     } = this.props;
 
     return (
-      <div>
+      <Container>
         <DisplayTweet tweetId={this.state.tweet.id} />
         <Tags tags={this.state.tweet.tags} />
         <RandomizeButton
@@ -41,8 +49,8 @@ class TweetContainer extends React.Component {
           getTweet={(tweet) => this.setTweet(tweet)}
         />
         {/* Display this for now inside story book for testing and tagging purposes */}
-        <TweetDisplayHelper tweet={this.state.tweet} />
-      </div>
+        {debug && <TweetDisplayHelper tweet={this.state.tweet} /> }
+      </Container>
     );
   }
 }

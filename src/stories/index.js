@@ -2,8 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import RandomizeButton from './components/randomize_button'
 import DisplayTweet from './components/embed_tweet';
-import TweetContainer from './components/tweet_container';
 import Tags from './components/tags';
+import TweetContainer from './components/tweet_container';
+import Layout from './components/layout';
 
 storiesOf('Components', module)
   .add('Randomize Me Button', () => (
@@ -22,7 +23,12 @@ storiesOf('Components', module)
 storiesOf('Prototype', module)
   .add('Randomizer Example', () => {
     return (
-      <TweetContainer tweetList={tweetList} />
+      <TweetContainer debug={true} tweetList={tweetList} />
+    );
+  })
+  .add('Full Layout', () => {
+    return (
+      <Layout tweetList={tweetList} />
     );
   });
 

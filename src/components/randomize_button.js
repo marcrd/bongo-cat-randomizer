@@ -3,15 +3,12 @@ import styled from 'react-emotion';
 
 const BongoCatButton = styled.button({
   background: '#F78AE0',
-  fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
   color: '#FFF',
   fontSize: 18,
   border: 0,
   height: 42,
-  width: '100%',
-  borderRadius: 2,
-  display: 'block',
-  maxWidth: 500 // Make sure we don't overflow on large screen sizes.
+  width: 160,
+  borderRadius: 2
 });
 
 function randomizeTweetList(tweetList) {

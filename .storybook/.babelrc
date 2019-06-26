@@ -1,7 +1,5 @@
 {
-  "presets": ["env", "stage-0", "react"],
   "plugins": [
-    "emotion",
-    "transform-object-rest-spread"
+    "emotion"
   ]
 }

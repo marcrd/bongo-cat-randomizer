@@ -43,11 +43,11 @@ class TweetContainer extends React.Component {
     return (
       <Container>
         <DisplayTweet tweetId={this.state.tweet.id} />
-          <Tags tags={this.state.tweet.tags} />
-          <RandomizeButton
-            tweetList={tweetList}
-            getTweet={(tweet) => this.setTweet(tweet)}
-          />
+        <Tags tags={this.state.tweet.tags} />
+        <RandomizeButton
+          tweetList={tweetList}
+          getTweet={(tweet) => this.setTweet(tweet)}
+        />
         {/* Display this for now inside story book for testing and tagging purposes */}
         {debug && <TweetDisplayHelper tweet={this.state.tweet} /> }
       </Container>

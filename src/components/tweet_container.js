@@ -3,7 +3,7 @@ import RandomizeButton from './randomize_button'
 import DisplayTweet from './embed_tweet';
 import TweetDisplayHelper from './tweet_display_helper';
 import Tags from './tags';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 const Container = styled.div({
   display: 'flex',

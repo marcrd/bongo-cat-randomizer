@@ -19,6 +19,9 @@ storiesOf('Components', module)
   ))
   .add('Tweet Tags', () => (
     <Tags tags={exampleTweet.tags} />
+  ))
+  .add('Footer', () => (
+    <p>Made with <span style={{color: '#e25555'}}>&#9829;</span> by <a href="https://twitter.com/inacubicle">@inacubicle</a></p>
   ));
 
 storiesOf('Prototype', module)

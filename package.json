@@ -7,7 +7,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-emotion": "^9.2.10",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "react-twitter-widgets": "^1.7.1"
   },
   "scripts": {
